@@ -11,11 +11,11 @@ npm add jfactory-promise
 
 ## Standalone
 
-This module exports the class `JFactoryPromise` from the package `jfactory-es` into smaller bundles compiled for development and production. 
+This module exports the class `JFactoryPromise` from the package [`jfactory-es`](https://www.npmjs.com/package/jfactory-es) into smaller bundles compiled for development and production. 
 
-This package is for stand-alone use. If you are already importing `jfactory-es` in your application, or if you need more Classes from jFactory, use the full package instead. 
+This package is for stand-alone use. If you are already importing the full library in your application, or if you need more Classes from [jFactory](https://github.com/jfactory-es/jfactory), use [`jfactory-es`](https://www.npmjs.com/package/jfactory-es) instead. 
 
-Because jFactory is a web application library, JFactoryPromise uses jQuery and lodash. See how to configure the [external dependencies](https://github.com/jfactory-es/jfactory/blob/master/doc/ref-import.md#external-dependencies).
+Because [`jFactory`](https://github.com/jfactory-es/jfactory) is a web application library, JFactoryPromise uses jQuery and lodash. See how to configure the [external dependencies](https://github.com/jfactory-es/jfactory/blob/master/doc/ref-import.md#external-dependencies).
 
 ## Importation
 
