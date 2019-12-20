@@ -15,9 +15,9 @@ This module exports the class `JFactoryPromise` from the package [`jfactory-es`]
 
 This package is for stand-alone use. If you are already importing the full library in your application, or if you need more Classes from [jFactory](https://github.com/jfactory-es/jfactory), use [`jfactory-es`](https://www.npmjs.com/package/jfactory-es) instead. 
 
-Because [`jFactory`](https://github.com/jfactory-es/jfactory) is a web application library, JFactoryPromise uses jQuery and lodash. See how to configure the [external dependencies](https://github.com/jfactory-es/jfactory/blob/master/doc/ref-import.md#external-dependencies).
-
 ## Importation
+
+Because [`jFactory`](https://github.com/jfactory-es/jfactory) is a web application library, JFactoryPromise uses jQuery and lodash. See how to configure the [external dependencies](https://github.com/jfactory-es/jfactory/blob/master/doc/ref-import.md#external-dependencies).
 
 #### Development 
 ```javascript
