@@ -1,1 +1,0 @@
-export { JFactoryPromise } from "jfactory-es/src/JFactoryPromise.mjs";

@@ -1,0 +1,1 @@
+export { JFactoryPromise } from "jfactory/dist/jFactory-devel.mjs";

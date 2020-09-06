@@ -1,6 +1,10 @@
-global.window = new (require("jsdom")).JSDOM().window;
-const { JFactoryPromise } = require("../dist");
+const jsdom = require("jsdom");
 const expect = require("chai").expect;
+
+global.window = new jsdom.JSDOM().window;
+global.document = window.document;
+
+const { JFactoryPromise } = require("../dist");
 
 describe('JFactoryPromise', function() {
     it('should return a JFactoryPromise', async function() {

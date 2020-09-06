@@ -1,23 +1,24 @@
 # JFactoryPromise Standalone Package
 
-Provides an ES6 Promise Class extended from native Promise, where the whole chain can be Awaited, Completed, Expired and Cancelled (Aborted). Also supports properties such as status, explorable chain map, shared data, debug data and trace.
+Provides an ES6 Promise class extended from native Promise, where the whole chain can be awaited, completed, expired and cancelled (aborted). Also supports properties such as status, explorable chain map, shared data, debug data and trace.
 
-```javascript
-npm add jfactory-promise
-```
-
-* [Documentation [redirects to jFactory]](https://github.com/jfactory-es/jfactory/blob/master/doc/JFactoryPromise.md)
+* [Documentation [redirects to jFactory]](https://github.com/jfactory-es/jfactory/blob/master/docs/JFactoryPromise.md)
 * [Source code [redirects to jFactory]](https://github.com/jfactory-es/jfactory/blob/master/src/JFactoryPromise.mjs)
 
 ## Standalone
 
-This module exports the class `JFactoryPromise` from the package [`jfactory-es`](https://www.npmjs.com/package/jfactory-es) into smaller bundles compiled for development and production. 
+This module exports the class `JFactoryPromise` from the library [`jfactory`](https://www.npmjs.com/package/jfactory). 
 
-This package is for stand-alone use. If you are already importing the full library in your application, or if you need more Classes from [jFactory](https://github.com/jfactory-es/jfactory), use [`jfactory-es`](https://www.npmjs.com/package/jfactory-es) instead. 
+This package is for stand-alone use and tries to reduce the module size. If you are already importing the full library in your application, or if you need more Classes from [jFactory](https://github.com/jfactory-es/jfactory), use [`jfactory`](https://www.npmjs.com/package/jfactory) instead. 
 
 ## Importation
 
-Because [`jFactory`](https://github.com/jfactory-es/jfactory) is a web application library, JFactoryPromise uses jQuery and lodash. See how to configure the [external dependencies](https://github.com/jfactory-es/jfactory/blob/master/doc/ref-import.md#external-dependencies).
+Because [`jFactory`](https://github.com/jfactory-es/jfactory) is a web application library, JFactoryPromise uses jQuery and lodash.
+
+```shell script
+npm add lodash jquery 
+npm add jfactory-promise
+```
 
 #### Development 
 ```javascript

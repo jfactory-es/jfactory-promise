@@ -3,8 +3,8 @@
 // -------------------------------
 
 const { terser } = require("rollup-plugin-terser");
-const resolve = require("rollup-plugin-node-resolve");
-const replace = require("rollup-plugin-replace");
+const { nodeResolve } = require("@rollup/plugin-node-resolve");
+const replace = require("@rollup/plugin-replace");
 
 const DEBUG = false;
 
@@ -27,7 +27,7 @@ let common_output = {
 };
 
 const plugins_prod = [
-  resolve({}),
+  nodeResolve({}),
 
   replace({
     COMPILER_DEV: false,
@@ -52,7 +52,7 @@ const plugins_prod = [
 ];
 
 const plugins_dev = [
-  resolve({}),
+  nodeResolve({}),
 
   replace({
     COMPILER_DEV: true,
@@ -79,7 +79,7 @@ const plugins_dev = [
 module.exports = [
 
   {
-    input: "src/index.mjs",
+    input: "src/index-prod.js",
     output: {
       format: "cjs",
       file: "dist/index.js",
@@ -92,7 +92,7 @@ module.exports = [
   },
 
   {
-    input: "src/index.mjs",
+    input: "src/index-devel.js",
     output: {
       format: "cjs",
       file: "dist/devel/index.js",

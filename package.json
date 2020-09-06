@@ -1,7 +1,7 @@
 {
   "name": "jfactory-promise",
-  "version": "1.0.0-beta.1",
-  "description": "JFactoryPromise - Promise Class extended from native Promise, where the whole chain can be Awaited, Completed, Expired and Cancelled (Aborted). Also supports properties such as status, explorable chain map, shared data, debug data and trace.",
+  "version": "1.1.0-alpha.0",
+  "description": "JFactoryPromise - Promise class extended from native Promise, where the whole chain can be awaited, completed, expired and cancelled (aborted). Also supports properties such as status, explorable chain map, shared data, debug data and trace.",
   "main": "dist/index.js",
   "scripts": {
     "build": "npx rollup --config",
@@ -16,19 +16,20 @@
   "author": "Stéphane Plazis",
   "license": "SEE LICENSE IN LICENSE.txt",
   "devDependencies": {
+    "rollup": "^2.26.10",
+    "rollup-plugin-terser": "^7.0.2",
+    "@rollup/plugin-node-resolve": "^9.0.0",
+    "@rollup/plugin-replace": "^2.3.3",
+    "jfactory": "^1.6.0",
+    "mocha": "^7.2.0",
     "chai": "^4.2.0",
-    "eslint": "^6.7.2",
-    "jfactory-es": "^1.1.0-beta.3",
-    "jsdom": "^15.2.1",
-    "mocha": "^6.2.2",
-    "rollup": "^1.27.13",
-    "rollup-plugin-node-resolve": "^5.2.0",
-    "rollup-plugin-replace": "^2.2.0",
-    "rollup-plugin-terser": "^5.1.3"
+    "jsdom": "^16.4.0",
+    "jquery": "^3",
+    "lodash": "^4"
   },
-  "dependencies": {
-    "jquery": "^3.4.1",
-    "lodash": "^4.17.15"
+  "peerDependencies": {
+    "jquery": "^3",
+    "lodash": "^4"
   },
   "files": [
     "dist/**"
