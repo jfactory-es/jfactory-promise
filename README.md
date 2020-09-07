@@ -23,13 +23,11 @@ npm add jfactory-promise
 #### Development 
 ```javascript
 const { JFactoryPromise } = require ("jfactory-promise/devel")
-import { JFactoryPromise } from "jfactory-promise/devel"
 ```
 
 #### Production 
 ```javascript
 const { JFactoryPromise } = require ("jfactory-promise")
-import { JFactoryPromise } from "jfactory-promise"
 ```
 
 ## Contributing
