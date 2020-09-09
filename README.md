@@ -1,6 +1,6 @@
 # JFactoryPromise Standalone Package
 
-Provides an ES6 Promise class extended from the native Promise, where the whole chain can be awaited, completed, expired and cancelled (aborted). Also supports properties such as status, explorable chain map, shared data, debug data and trace.
+Provides an ES6 Promise extended, where the whole chain can be awaited, completed, expired and cancelled (aborted). Also supports properties such as status, explorable chain map, shared data, debug data and trace.
 
 * [Documentation [redirects to jFactory]](https://github.com/jfactory-es/jfactory/blob/master/docs/JFactoryPromise.md)
 * [Source code [redirects to jFactory]](https://github.com/jfactory-es/jfactory/blob/master/src/JFactoryPromise.mjs)
