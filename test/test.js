@@ -11,16 +11,16 @@ describe('JFactoryPromise', function() {
 
     it('should return a JFactoryPromise (prod)', async function() {
         let promise = new JFactoryPromise_prod.JFactoryPromise(
-            {name: "test1"},
-            function (resolve) {resolve(111)}
+            { name: "test" },
+            function (resolve) { resolve(111) }
         );
         expect(await promise).equal(111)
     });
 
     it('should return a JFactoryPromise (devel)', async function() {
         let promise = new JFactoryPromise_devel.JFactoryPromise(
-            {name: "test1"},
-            function (resolve) {resolve(111)}
+            { name: "test" },
+            function (resolve) { resolve(111) }
         );
         expect(await promise).equal(111)
     });

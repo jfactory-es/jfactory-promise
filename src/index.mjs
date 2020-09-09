@@ -1,6 +1,6 @@
-import { jFactoryLoader } from "../../../jFactory_1/workspace/src/jFactory-loader";
+import { jFactoryBootstrap } from "../../../jFactory_1/workspace/src/jFactory-bootstrap";
 export { JFactoryPromise } from "../../../jFactory_1/workspace/src/JFactoryPromise";
 
 if (typeof jFactoryOverride === "undefined" || !jFactoryOverride) {
-    jFactoryLoader.init();
+    jFactoryBootstrap();
 }

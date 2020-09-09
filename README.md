@@ -7,9 +7,9 @@ Provides an ES6 Promise class extended from native Promise, where the whole chai
 
 ## Standalone
 
-This module exports the class `JFactoryPromise` from the library [`jfactory`](https://www.npmjs.com/package/jfactory). 
+This module exports the class `JFactoryPromise` from the library [`jfactory`](https://www.npmjs.com/package/jfactory) into a small stand-alone package. 
 
-This package is for stand-alone use and tries to reduce the module size. If you are already importing the full library in your application, or if you need more Classes from [jFactory](https://github.com/jfactory-es/jfactory), use [`jfactory`](https://www.npmjs.com/package/jfactory) instead. 
+If you are already using the full jFactory library in your application, or if you need more Classes from [jFactory](https://github.com/jfactory-es/jfactory), use [`jfactory`](https://www.npmjs.com/package/jfactory) instead. 
 
 ## Importation
 
@@ -29,6 +29,11 @@ const { JFactoryPromise } = require ("jfactory-promise/devel")
 ```javascript
 const { JFactoryPromise } = require ("jfactory-promise")
 ```
+
+#### Documentation
+
+* [Usages [redirects to jFactory]](https://github.com/jfactory-es/jfactory/blob/master/docs/JFactoryPromise.md#usages)
+* [Documentation [redirects to jFactory]](https://github.com/jfactory-es/jfactory/blob/master/docs/JFactoryPromise.md)
 
 ## Contributing
 
