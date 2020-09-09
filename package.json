@@ -1,6 +1,6 @@
 {
   "name": "jfactory-promise",
-  "version": "1.7.0",
+  "version": "1.7.1",
   "description": "Promise extended where the whole chain can be awaited, completed, expired and aborted. Also supports properties such as status, explorable chain map, shared data, debug data and trace.",
   "keywords": [
     "promise",
