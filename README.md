@@ -9,11 +9,11 @@ Provides an ES6 Promise class extended from the native Promise, where the whole 
 
 This module exports the class `JFactoryPromise` from the library [`jfactory`](https://www.npmjs.com/package/jfactory) into a small stand-alone package. 
 
-If you are already using the full jFactory library in your application, or if you need more Classes from [jFactory](https://github.com/jfactory-es/jfactory), use [`jfactory`](https://www.npmjs.com/package/jfactory) instead. 
+If you are already using the full library in your application, or if you need more Classes from [jFactory](https://github.com/jfactory-es/jfactory), use [`jfactory`](https://www.npmjs.com/package/jfactory) instead. 
 
 ## Importation
 
-Because [`jFactory`](https://github.com/jfactory-es/jfactory) is a web application library, JFactoryPromise uses jQuery and lodash.
+Because [`jFactory`](https://github.com/jfactory-es/jfactory) is a web application library, `JFactoryPromise` uses jQuery and lodash.
 
 ```shell script
 npm add lodash jquery 
@@ -34,7 +34,3 @@ const { JFactoryPromise } = require ("jfactory-promise")
 
 * [Usages [redirects to jFactory]](https://github.com/jfactory-es/jfactory/blob/master/docs/JFactoryPromise.md#usages)
 * [Documentation [redirects to jFactory]](https://github.com/jfactory-es/jfactory/blob/master/docs/JFactoryPromise.md)
-
-## Contributing
-
-Thank you to everyone who takes the time to share their comments, bug reports and fixes. If you have any questions, feel free to create an [issue](https://github.com/jfactory-es/jfactory-promise/issues).
