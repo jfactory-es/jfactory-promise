@@ -1,7 +1,7 @@
 {
   "name": "jfactory-promise",
   "version": "1.7.0",
-  "description": "JFactoryPromise - Promise class extended from native Promise, where the whole chain can be awaited, completed, expired and cancelled (aborted). Also supports properties such as status, explorable chain map, shared data, debug data and trace.",
+  "description": "Promise extended where the whole chain can be awaited, completed, expired and aborted. Also supports properties such as status, explorable chain map, shared data, debug data and trace.",
   "main": "dist/index.js",
   "scripts": {
     "build": "npx rollup --config",
