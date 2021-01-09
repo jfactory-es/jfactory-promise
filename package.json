@@ -1,7 +1,7 @@
 {
   "name": "jfactory-promise",
-  "version": "1.7.1",
-  "description": "Promise extended where the whole chain can be awaited, completed, expired and aborted. Also supports properties such as status, explorable chain map, shared data, debug data and trace.",
+  "version": "1.7.6-beta",
+  "description": "Improved Promise where the whole tree can be awaited and canceled, with status, explorable chain map, shared data, debug data and trace.",
   "keywords": [
     "promise",
     "abort",
@@ -24,30 +24,30 @@
   ],
   "main": "dist/index.js",
   "scripts": {
-    "build": "npx rollup --config",
-    "test": "npx mocha test/test.js"
+    "build": "node node_modules/.bin/rollup --config scripts/bundler/rollup.config.js",
+    "test": "node node_modules/.bin/mocha test/test.js"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/jfactory-es/jfactory-promise.git"
   },
   "homepage": "https://github.com/jfactory-es/jfactory-promise#readme",
-  "bugs": "https://github.com/jfactory-es/jfactory/issues",
+  "bugs": "https://github.com/jfactory-es/jfactory-promise/issues",
   "author": "Stéphane Plazis",
   "license": "SEE LICENSE IN LICENSE.txt",
   "//": {
-    "jfactory": "file:../../jFactory_1/workspace"
+    "jfactory": "file:../../jFactory_1/workspace",
+    "@rollup/plugin-node-resolve": "^11.0.1"
   },
   "devDependencies": {
-    "rollup": "^2.26.10",
-    "rollup-plugin-terser": "^7.0.2",
-    "@rollup/plugin-replace": "^2.3.3",
-    "jfactory": "^1.7.0",
-    "mocha": "^7.2.0",
+    "@rollup/plugin-node-resolve": "^11.0.1",
+    "@rollup/plugin-replace": "^2.3.4",
     "chai": "^4.2.0",
+    "jfactory": "^1.7.6",
     "jsdom": "^16.4.0",
-    "jquery": "^3",
-    "lodash": "^4"
+    "mocha": "^7.2.0",
+    "rollup": "^2.36.1",
+    "rollup-plugin-terser": "^7.0.2"
   },
   "peerDependencies": {
     "jquery": "^3",

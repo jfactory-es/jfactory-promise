@@ -1,6 +1,4 @@
-import { jFactoryBootstrap } from "../../../jFactory_1/workspace/src/jFactory-bootstrap";
-export { JFactoryPromise } from "../../../jFactory_1/workspace/src/JFactoryPromise";
+import { jFactoryBootstrap } from "jfactory/src/indexLibs.mjs";
+export { JFactoryPromise } from "jfactory/src/indexLibs.mjs";
 
-if (typeof jFactoryOverride === "undefined" || !jFactoryOverride) {
-    jFactoryBootstrap();
-}
+jFactoryBootstrap(true)
