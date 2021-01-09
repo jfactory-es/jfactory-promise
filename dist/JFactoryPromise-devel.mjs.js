@@ -1,10 +1,9 @@
 /*!
- * JFactoryPromise v1.7.6-beta
+ * JFactoryPromise v1.7.7-beta
  * http://github.com/jfactory-es/jfactory-promise
  * (c) 2019-2021, Stéphane Plazis, http://github.com/jfactory-es/jfactory-promise/blob/master/LICENSE.txt
  */
 import _ from 'lodash';
-import $ from 'jquery';
 
 // ---------------------------------------------------------------------------------------------------------------------
 // jFactory Env
@@ -14,7 +13,7 @@ import $ from 'jquery';
 
 // The builder replaces these lines
 const JFACTORY_NAME = "JFactoryPromise";
-const JFACTORY_VER  = "1.7.6-beta-devel-mjs";
+const JFACTORY_VER  = "1.7.7-beta-devel-mjs";
 
 // The builder may replace env("JFACTORY_ENV_*") by hard coded true/false primitives,
 // allowing the bundler to remove unused code using Tree Shaking
@@ -84,23 +83,6 @@ function jFactoryCompat_run(entries = deferred) {
             }
         }
     }
-}
-
-{
-    jFactoryCompat_run([
-        {
-            name: "lodash",
-            test: () => _,
-            strict: true,
-            info: "http://github.com/jfactory-es/jfactory/blob/master/docs/ref-import.md"
-        },
-        {
-            name: "jquery",
-            test: () => $,
-            strict: true,
-            info: "http://github.com/jfactory-es/jfactory/blob/master/docs/ref-import.md"
-        }
-    ]);
 }
 
 const helper_isString = _.isString;
@@ -1494,6 +1476,9 @@ class JFactoryPromisePath extends Array {
 
     toString() {return this.printable}
 }
+
+// import { jFactoryBootstrap } from "../../../jFactory_1/workspace/src/indexLibs.mjs";
+// export { JFactoryPromise } from "../../../jFactory_1/workspace/src/indexLibs.mjs";
 
 jFactoryBootstrap(true);
 

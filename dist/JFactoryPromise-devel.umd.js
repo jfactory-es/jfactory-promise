@@ -1,13 +1,13 @@
 /*!
- * JFactoryPromise v1.7.6-beta
+ * JFactoryPromise v1.7.7-beta
  * http://github.com/jfactory-es/jfactory-promise
  * (c) 2019-2021, Stéphane Plazis, http://github.com/jfactory-es/jfactory-promise/blob/master/LICENSE.txt
  */
 (function (global, factory) {
-    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('lodash'), require('jquery')) :
-    typeof define === 'function' && define.amd ? define(['exports', 'lodash', 'jquery'], factory) :
-    (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.jFactoryModule = {}, global._, global.$));
-}(this, (function (exports, _, $) { 'use strict';
+    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('lodash')) :
+    typeof define === 'function' && define.amd ? define(['exports', 'lodash'], factory) :
+    (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.jFactoryModule = {}, global._));
+}(this, (function (exports, _) { 'use strict';
 
     // ---------------------------------------------------------------------------------------------------------------------
     // jFactory Env
@@ -17,7 +17,7 @@
 
     // The builder replaces these lines
     const JFACTORY_NAME = "JFactoryPromise";
-    const JFACTORY_VER  = "1.7.6-beta-devel-umd";
+    const JFACTORY_VER  = "1.7.7-beta-devel-umd";
 
     // The builder may replace env("JFACTORY_ENV_*") by hard coded true/false primitives,
     // allowing the bundler to remove unused code using Tree Shaking
@@ -87,23 +87,6 @@
                 }
             }
         }
-    }
-
-    {
-        jFactoryCompat_run([
-            {
-                name: "lodash",
-                test: () => _,
-                strict: true,
-                info: "http://github.com/jfactory-es/jfactory/blob/master/docs/ref-import.md"
-            },
-            {
-                name: "jquery",
-                test: () => $,
-                strict: true,
-                info: "http://github.com/jfactory-es/jfactory/blob/master/docs/ref-import.md"
-            }
-        ]);
     }
 
     const helper_isString = _.isString;
@@ -1497,6 +1480,9 @@
 
         toString() {return this.printable}
     }
+
+    // import { jFactoryBootstrap } from "../../../jFactory_1/workspace/src/indexLibs.mjs";
+    // export { JFactoryPromise } from "../../../jFactory_1/workspace/src/indexLibs.mjs";
 
     jFactoryBootstrap(true);
 
