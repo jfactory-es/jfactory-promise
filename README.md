@@ -11,23 +11,27 @@ This module exports the class `JFactoryPromise` from the library [`jfactory`](ht
 
 If you are already using the full library in your application, or if you need more Classes from [jFactory](https://github.com/jfactory-es/jfactory), use [`jfactory`](https://www.npmjs.com/package/jfactory) instead. 
 
-<!--
-## Importation
-
-Because [`jFactory`](https://github.com/jfactory-es/jfactory) is a web application library, `JFactoryPromise` uses jQuery and lodash.
--->
 ```shell script
 npm add jfactory-promise
 ```
 
-#### Development 
-```javascript
-const { JFactoryPromise } = require ("jfactory-promise/devel")
-```
-
-#### Production 
+#### Import
 ```javascript
 const { JFactoryPromise } = require ("jfactory-promise")
+```
+The package will automatically switch between `development` and `production` based 
+on the value of `process.env.NODE_ENV`. [Webpack automatically configures it](https://webpack.js.org/guides/production/#specify-the-mode). 
+
+
+
+#### Force development module 
+```javascript
+const { JFactoryPromise } = require ("jfactory-promise/dist/JFactory-devel.umd.js")
+```
+
+#### Force production module 
+```javascript
+const { JFactoryPromise } = require ("jfactory-promise/dist/JFactory.umd.js")
 ```
 
 ## Documentation
