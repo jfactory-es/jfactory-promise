@@ -34,7 +34,7 @@ import { JFactoryPromise } from "jfactory-promise";
 The package will automatically switch between `development` and `production` based 
 on the value of `process.env.NODE_ENV`. [Webpack automatically configures it](https://webpack.js.org/guides/production/#specify-the-mode). 
 
-###Manual import:
+### Manual import:
 
 #### Force development module 
 ```javascript
