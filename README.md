@@ -24,6 +24,9 @@ npm add lodash
 npm add jfactory-promise
 ```
 
+The package uses use `lodash` as peer dependency to maximize optimizations with your project (so you need to install it manually).
+> See also [babel-plugin-lodash](https://github.com/lodash/babel-plugin-lodash) to reduce the size of lodash.
+
 
 ### Automatic import
 
