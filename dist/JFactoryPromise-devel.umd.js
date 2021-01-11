@@ -1,5 +1,5 @@
 /*!
- * JFactoryPromise v1.7.7-beta
+ * JFactoryPromise v1.7.7-beta.0
  * http://github.com/jfactory-es/jfactory-promise
  * (c) 2019-2021, Stéphane Plazis, http://github.com/jfactory-es/jfactory-promise/blob/master/LICENSE.txt
  */
@@ -17,7 +17,7 @@
 
     // The builder replaces these lines
     const JFACTORY_NAME = "JFactoryPromise";
-    const JFACTORY_VER  = "1.7.7-beta-devel-umd";
+    const JFACTORY_VER  = "1.7.7-beta.0-devel-umd";
 
     // The builder may replace env("JFACTORY_ENV_*") by hard coded true/false primitives,
     // allowing the bundler to remove unused code using Tree Shaking

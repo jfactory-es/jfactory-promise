@@ -11,11 +11,42 @@ Provides synchronous status, explorable chain map, shared data, debug data and t
 
 # JFactoryPromise-standalone
 
-> Standalone: This module exports the class `JFactoryPromise` from [`jfactory`](https://www.npmjs.com/package/jfactory) into a stand-alone package.
+> Standalone: This module exports the class `JFactoryPromise` from [`jfactory`](https://www.npmjs.com/package/jfactory) into a smaller standalone package.
 > ___Don't use it if you are already using the full module.___
 
 * [Documentation [redirects to jFactory]](https://github.com/jfactory-es/jfactory/blob/master/docs/JFactoryPromise.md)
 * [Source code [redirects to jFactory]](https://github.com/jfactory-es/jfactory/blob/master/src/JFactoryPromise.mjs)
+
+### Overview
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/lodash/lodash.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jfactory-promise@1.7.7-beta.0/dist/jFactoryPromise-devel.umd.js"></script>
+<script>
+    const { JFactoryPromise } = jFactoryModule;
+    let h = r => r, myPromise, a, b;
+    
+    myPromise = JFactoryPromise.resolve('ok');
+    a = myPromise.then(h);
+    b = myPromise.then(h).then(h);
+    /* abort */
+    console.dir(myPromise);
+    myPromise.$chainAbort("canceled !");
+    console.dir(myPromise);
+    /* chain expired, new handlers not called (passthrough): */
+    myPromise.then(h);
+    a.then(h);
+    b.then(h).then(h);
+
+    // ---
+
+    myPromise = JFactoryPromise.resolve('ok');
+    myPromise.$chainAutoComplete();
+    a = myPromise.then(h).then(h);
+    b = myPromise.then(h).then(h);
+    await myPromise.$chain; // wait for all declared promises
+</script>
+```
 
 ### Install
 
