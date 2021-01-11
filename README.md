@@ -24,19 +24,9 @@ Provides synchronous status, explorable chain map, shared data, debug data and t
 <script src="https://cdn.jsdelivr.net/npm/jfactory-promise@1.7.7-beta.2/dist/JFactoryPromise-devel.umd.js"></script>
 <script>
     const { JFactoryPromise } = jFactoryModule;
-    let myPromise, a, b, h = r => {/*console.log(r);*/return r};
+    let myPromise, a, b;
 
-    myPromise = JFactoryPromise.resolve('hello');
-    a = myPromise.then(h);
-    b = myPromise.then(h).then(h);
-    // abort the whole chain, handlers not called:
-    myPromise.$chainAbort("canceled !");
-    // chain expired, new handlers not called (passthrough):
-    myPromise.then(h);
-    a.then(h);
-    b.then(h).then(h);
-
-    // ---
+    // --- Await the whole tree ---
 
     (async function() {
         myPromise = JFactoryPromise.resolve('ok');
@@ -52,6 +42,21 @@ Provides synchronous status, explorable chain map, shared data, debug data and t
         a.then(h);
         b.then(h).then(h);
     })();
+
+    // --- Abort the whole tree ---
+
+    myPromise = JFactoryPromise.resolve('hello');
+    a = myPromise.then(h);
+    b = myPromise.then(h).then(h);
+    // abort the whole tree, handlers not called:
+    myPromise.$chainAbort("canceled !");
+    // chain expired, new handlers not called (passthrough):
+    myPromise.then(h);
+    a.then(h);
+    b.then(h).then(h);
+
+    // handler
+    function h(value) {/*console.log(value);*/return value}
 
 </script>
 ```
