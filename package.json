@@ -1,6 +1,6 @@
 {
   "name": "jfactory-promise",
-  "version": "1.7.7-beta.0",
+  "version": "1.7.7-beta.2",
   "description": "Promise where the whole tree can be awaited, canceled and expired. Provides synchronous status, explorable chain map, shared data, debug data and trace.",
   "keywords": [
     "promise",

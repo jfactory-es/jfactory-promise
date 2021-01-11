@@ -1,5 +1,5 @@
 /*!
- * JFactoryPromise v1.7.7-beta.0
+ * JFactoryPromise v1.7.7-beta.2
  * http://github.com/jfactory-es/jfactory-promise
  * (c) 2019-2021, Stéphane Plazis, http://github.com/jfactory-es/jfactory-promise/blob/master/LICENSE.txt
  */

@@ -21,30 +21,38 @@ Provides synchronous status, explorable chain map, shared data, debug data and t
 
 ```html
 <script src="https://cdn.jsdelivr.net/npm/lodash/lodash.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/jfactory-promise@1.7.7-beta.0/dist/JFactoryPromise-devel.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jfactory-promise@1.7.7-beta.2/dist/JFactoryPromise-devel.umd.js"></script>
 <script>
     const { JFactoryPromise } = jFactoryModule;
-    let h = r => r, myPromise, a, b;
-    
-    myPromise = JFactoryPromise.resolve('ok');
+    let myPromise, a, b, h = r => {/*console.log(r);*/return r};
+
+    myPromise = JFactoryPromise.resolve('hello');
     a = myPromise.then(h);
     b = myPromise.then(h).then(h);
-    /* abort */
-    console.dir(myPromise);
+    // abort the whole chain, handlers not called:
     myPromise.$chainAbort("canceled !");
-    console.dir(myPromise);
-    /* chain expired, new handlers not called (passthrough): */
+    // chain expired, new handlers not called (passthrough):
     myPromise.then(h);
     a.then(h);
     b.then(h).then(h);
 
     // ---
 
-    myPromise = JFactoryPromise.resolve('ok');
-    myPromise.$chainAutoComplete();
-    a = myPromise.then(h).then(h);
-    b = myPromise.then(h).then(h);
-    await myPromise.$chain; // wait for all declared promises
+    (async function() {
+        myPromise = JFactoryPromise.resolve('ok');
+        a = myPromise.then(h).then(h);
+        b = myPromise.then(h).then(h);
+        // will expire the chain as soon as no more promises are pending:          
+        myPromise.$chainAutoComplete();
+        // wait for all promises         
+        await myPromise.$chain;
+        console.log("done");
+        // chain expired, new handlers not called (passthrough):
+        myPromise.then(h);
+        a.then(h);
+        b.then(h).then(h);
+    })();
+
 </script>
 ```
 
