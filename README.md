@@ -21,7 +21,7 @@ Provides synchronous status, explorable chain map, shared data, debug data and t
 
 ```html
 <script src="https://cdn.jsdelivr.net/npm/lodash/lodash.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/jfactory-promise@1.7.7-beta.0/dist/jFactoryPromise-devel.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jfactory-promise@1.7.7-beta.0/dist/JFactoryPromise-devel.umd.js"></script>
 <script>
     const { JFactoryPromise } = jFactoryModule;
     let h = r => r, myPromise, a, b;
